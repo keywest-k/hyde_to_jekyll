@@ -8,6 +8,7 @@ module HydeToJekyll
       agent = ApiAgent.new(site_host)
 
       agent.dynamic_tables.each do |dynamic_table|
+        dynamic_records = agent.dynamic_records(dynamic_table[:id])
         Outputter.new(dynamic_table, dynamic_records).output
       end
     end

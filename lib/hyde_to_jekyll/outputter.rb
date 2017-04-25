@@ -8,22 +8,24 @@ module HydeToJekyll
     end
 
     def output
-      File.open(output_path, "w") do |f|
+      FileUtils.mkdir_p(output_dir)
+      File.open(File.join(output_dir, file_name), "w") do |f|
         f.puts(output_str)
       end
+      puts "Output: #{File.join(output_dir, file_name)}"
     end
 
     private
       def output_str
         case type
         when :data
-          @dynamic_records.to_yaml
+          @dynamic_records.map(&:deep_stringify_keys).to_yaml
         when :post
         when :page
         end
       end
 
-      def output_path
+      def output_dir
         path_list = [Dir.pwd]
 
         case type
@@ -35,8 +37,11 @@ module HydeToJekyll
           # none
         end
 
-        path_list << "#{@dynamic_table[:uid]}.yml"
         File.join(*path_list)
+      end
+
+      def file_name
+        "#{@dynamic_table[:uid].pluralize}.yml"
       end
 
       def type

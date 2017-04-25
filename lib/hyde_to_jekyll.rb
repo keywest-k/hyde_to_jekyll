@@ -7,5 +7,4 @@ require "hyde_to_jekyll/api_agent"
 require "hyde_to_jekyll/outputter"
 
 module HydeToJekyll
-  # Your code goes here...
 end
