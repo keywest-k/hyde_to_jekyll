@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'hyde_to_jekyll'
+
+HydeToJekyll::CLI.start

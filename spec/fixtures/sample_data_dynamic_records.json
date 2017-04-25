@@ -1,0 +1,28 @@
+[
+  {
+    "date":"2017-04-24",
+    "datetime":"2017-04-24T12:03:00.000+09:00",
+    "integer":111,
+    "string":null,
+    "text":"あいうえお\r\nyeah!!!\r\nおーーーのーーーー！！！",
+    "file":{
+      "url":null,
+      "thumb":{
+        "url":null
+      }
+    }
+  },
+  {
+    "date":"2017-04-25",
+    "datetime":"2017-04-25T09:25:00.000+09:00",
+    "integer":1234,
+    "string":"foobarbazquz",
+    "text":"おーのー\r\nアイアムレシェント",
+    "file":{
+      "url":"/uploads/dynamic_data_types/file/value/1/hot201506.pdf",
+      "thumb":{
+        "url":"/uploads/dynamic_data_types/file/value/1/thumb_hot201506.pdf.jpg"
+      }
+    }
+  }
+]
