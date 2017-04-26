@@ -4,7 +4,7 @@ require 'httparty'
 module HydeToJekyll
   class ApiAgent
     include HTTParty
-    base_uri 'keywest-hyde.herokuapp.com'
+    base_uri 'app.hyde.site'
 
     def initialize(site_host)
       @site_host = site_host
